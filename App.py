@@ -1,3 +1,4 @@
+import utils.session
 import random 
 def spin_row():
     symbols=['🌹','🎉','🎂','🤳']
@@ -53,9 +54,11 @@ def main():
             print(f"Sorry You lost.Your balance is {balance}")
 
         balance+=payout
+        play_again=input("Do you want to play again? (Y/N): ").upper()
 
+        if play_again !='Y':
+            break
 
-    pass
 
 if __name__=='__main__':
-    main()
+    main() 
